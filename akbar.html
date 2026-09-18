@@ -3,85 +3,1125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Individu - Akbar</title>
+
+    <title>Akbar Aridani Setiawan</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            width: 100%;
-            max-width: 500px;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            background: #4a90e2;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            font-weight: bold;
-            margin: 0 auto 20px auto;
-        }
-
-        h1 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #666;
+            font-family: "Inter", sans-serif;
+            background: #f5f8f7;
+            color: #17201d;
             line-height: 1.6;
-            margin-bottom: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 70px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(245, 248, 247, 0.9);
+            backdrop-filter: blur(10px);
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #0fab8e;
+            color: white;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar nav a {
+            font-size: 13px;
+            font-weight: 500;
+            color: #68736f;
+
+            transition: 0.2s;
+        }
+
+        .navbar nav a:hover {
+            color: #0fab8e;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            padding: 100px 8% 40px;
+
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+
+            align-items: center;
+
+            gap: 70px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background: #dff6ef;
+
+            right: -180px;
+            top: 100px;
+
+            z-index: -1;
+        }
+
+
+        /* =========================
+           HERO TEXT
+        ========================= */
+
+        .small-title,
+        .section-label {
+            color: #0fab8e;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 5vw, 72px);
+
+            line-height: 1.02;
+
+            letter-spacing: -3px;
+
+            margin: 12px 0 15px;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: #0fab8e;
+        }
+
+        .hero h2 {
+            font-size: 21px;
+            font-weight: 600;
+
+            color: #4d5a55;
+
+            margin-bottom: 18px;
+        }
+
+        .description {
+            max-width: 570px;
+
+            color: #68736f;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+
+            margin-top: 27px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #4a90e2;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
+            padding: 12px 18px;
+
+            border-radius: 10px;
+
+            font-size: 12px;
             font-weight: 600;
-            transition: background-color 0.3s ease;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            transition: 0.25s;
         }
 
-        .btn:hover {
-            background-color: #357abd;
+        .btn.primary {
+            background: #0fab8e;
+            color: white;
+
+            box-shadow: 0 10px 25px rgba(15, 171, 142, 0.2);
         }
+
+        .btn.primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn.secondary {
+            border: 1px solid #d9e2df;
+
+            background: white;
+        }
+
+        .btn.secondary:hover {
+            border-color: #0fab8e;
+            color: #0fab8e;
+        }
+
+
+        /* =========================
+           SOCIAL MEDIA
+        ========================= */
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+
+            margin-top: 27px;
+        }
+
+        .social-icons a {
+            width: 36px;
+            height: 36px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #65716c;
+
+            transition: 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #0fab8e;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PROFILE CARD
+        ========================= */
+
+        .profile-area {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: min(100%, 380px);
+
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid #e6eeeb;
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 25px 70px rgba(23, 32, 29, 0.08);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            color: #a0aaa6;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #0fab8e;
+
+            box-shadow: 0 0 0 4px #e2f8f2;
+        }
+
+        .avatar {
+            width: 95px;
+            height: 95px;
+
+            margin: 30px auto 18px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #dff6ef;
+
+            color: #0fab8e;
+
+            font-size: 40px;
+            font-weight: 800;
+
+            border: 8px solid white;
+
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .profile-card h3 {
+            text-align: center;
+
+            font-size: 19px;
+        }
+
+        .campus {
+            text-align: center;
+
+            color: #7b8581;
+
+            font-size: 11px;
+
+            margin-top: 5px;
+        }
+
+        .line {
+            height: 1px;
+
+            background: #edf1ef;
+
+            margin: 23px 0;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+        .info div {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            font-size: 11px;
+
+            color: #65716c;
+        }
+
+        .info i {
+            width: 20px;
+
+            text-align: center;
+
+            color: #0fab8e;
+        }
+
+
+        /* =========================
+           LOWER SECTION
+        ========================= */
+
+        .bottom-section {
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 20px;
+
+            padding: 0 8% 45px;
+        }
+
+        .content-box {
+            background: white;
+
+            border: 1px solid #e6eeeb;
+
+            border-radius: 20px;
+
+            padding: 28px;
+        }
+
+        .content-box h2 {
+            font-size: 24px;
+
+            line-height: 1.2;
+
+            margin: 10px 0 20px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .skills span {
+            padding: 8px 11px;
+
+            border-radius: 8px;
+
+            background: #f2f7f5;
+
+            color: #52605a;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+        .skills i {
+            color: #0fab8e;
+
+            margin-right: 5px;
+        }
+
+
+        /* =========================
+           WRITING
+        ========================= */
+
+        .writing-box {
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .writing-icon {
+            min-width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #dff6ef;
+
+            color: #0fab8e;
+        }
+
+        .writing-box h2 {
+            margin-bottom: 9px;
+        }
+
+        .writing-box p:not(.section-label) {
+            font-size: 12px;
+
+            color: #68736f;
+
+            line-height: 1.7;
+        }
+
+        .text-link {
+            display: inline-flex;
+
+            gap: 8px;
+
+            margin-top: 13px;
+
+            color: #0fab8e;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            margin: 0 8% 30px;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background: #17201d;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .contact h2 {
+            font-size: 28px;
+
+            margin-top: 7px;
+        }
+
+        .contact-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .contact-list a {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 12px;
+
+            color: #d6dfdb;
+        }
+
+        .contact-list a:hover {
+            color: #0fab8e;
+        }
+
+        .contact-list i {
+            width: 18px;
+
+            color: #0fab8e;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 0 20px 25px;
+
+            font-size: 10px;
+
+            color: #89938f;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding-top: 110px;
+
+                gap: 45px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .description {
+                margin: auto;
+            }
+
+            .buttons,
+            .social-icons {
+                justify-content: center;
+            }
+
+            .hero h1 span {
+                display: inline;
+            }
+
+            .bottom-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                height: 62px;
+
+                padding: 0 20px;
+            }
+
+            .navbar nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding: 95px 20px 35px;
+
+                gap: 35px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+
+                letter-spacing: -2px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .profile-card {
+                padding: 24px;
+            }
+
+            .bottom-section {
+                padding: 0 20px 30px;
+            }
+
+            .content-box {
+                padding: 24px;
+            }
+
+            .content-box h2 {
+                font-size: 22px;
+            }
+
+            .writing-box {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .writing-icon {
+                width: 48px;
+            }
+
+            .contact {
+                margin: 0 20px 25px;
+
+                padding: 25px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 22px;
+            }
+
+            .contact h2 {
+                font-size: 24px;
+            }
+
+            .contact-list {
+                width: 100%;
+            }
+
+            .contact-list a {
+                padding: 9px 0;
+
+                border-bottom: 1px solid #29332f;
+            }
+        }
+
     </style>
 </head>
+
+
 <body>
 
-    <div class="card">
-        <div class="avatar">A</div>
-        <h1>Akbar Aridani Setiawan</h1>
-        <p>Selamat datang di halaman individu saya. Halaman ini dibuat sebagai bagian dari tugas kolaborasi pengembangan web dan version control menggunakan Git.</p>
-        <a href="index.html" class="btn">← Halaman Utama</a>
-    </div>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                A
+            </div>
+
+            Akbar.
+
+        </div>
+
+
+        <nav>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#writing">Writing</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="about">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-text">
+
+            <p class="small-title">
+                HELLO, I'M
+            </p>
+
+
+            <h1>
+                Akbar Aridani
+                <span>Setiawan.</span>
+            </h1>
+
+
+            <h2>
+                Mahasiswa Informatika
+            </h2>
+
+
+            <p class="description">
+                Saya adalah mahasiswa Informatika di Universitas
+                Sultan Ageng Tirtayasa yang tertarik pada teknologi,
+                jaringan komputer, pemrograman, dan dunia menulis.
+                Bagi saya, belajar tidak hanya tentang memahami teori,
+                tetapi juga mencoba dan membagikan pengalaman melalui tulisan.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#contact" class="btn primary">
+                    Hubungi Saya
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+
+                <a href="#writing" class="btn secondary">
+                    Cerita Saya
+                </a>
+
+            </div>
+
+
+            <div class="social-icons">
+
+                <!-- GANTI LINK # DENGAN LINK ASLI -->
+
+                <a href="#" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+
+                <a href="#" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+
+                <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="profile-area">
+
+            <div class="profile-card">
+
+
+                <div class="card-top">
+
+                    <div class="status">
+
+                        <span class="status-dot"></span>
+
+                        Currently learning
+
+                    </div>
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+
+                <div class="avatar">
+                    A
+                </div>
+
+
+                <h3>
+                    Akbar Aridani Setiawan
+                </h3>
+
+
+                <p class="campus">
+                    Informatika · Universitas Sultan Ageng Tirtayasa
+                </p>
+
+
+                <div class="line"></div>
+
+
+                <div class="info">
+
+                    <div>
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <span>
+                            Mahasiswa Informatika
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-pen-nib"></i>
+
+                        <span>
+                            Penulis di Kompasiana
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                        <span>
+                            Technology Enthusiast
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-book"></i>
+
+                        <span>
+                            Suka belajar dan menulis
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS + WRITING
+    ========================== -->
+
+    <section class="bottom-section">
+
+
+        <!-- SKILLS -->
+
+        <div class="content-box" id="skills">
+
+            <p class="section-label">
+                WHAT I LIKE
+            </p>
+
+
+            <h2>
+                Belajar, mencoba,
+                lalu menulisnya.
+            </h2>
+
+
+            <div class="skills">
+
+                <span>
+                    <i class="fa-solid fa-network-wired"></i>
+                    Networking
+                </span>
+
+
+                <span>
+                    <i class="fa-solid fa-code"></i>
+                    Programming
+                </span>
+
+
+                <span>
+                    <i class="fa-solid fa-database"></i>
+                    Database
+                </span>
+
+
+                <span>
+                    <i class="fa-solid fa-pen"></i>
+                    Writing
+                </span>
+
+
+                <span>
+                    <i class="fa-solid fa-microchip"></i>
+                    IoT
+                </span>
+
+
+                <span>
+                    <i class="fa-solid fa-gamepad"></i>
+                    Gaming
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WRITING -->
+
+        <div class="content-box writing-box" id="writing">
+
+
+            <div class="writing-icon">
+
+                <i class="fa-solid fa-feather-pointed"></i>
+
+            </div>
+
+
+            <div>
+
+                <p class="section-label">
+                    MY WRITING JOURNEY
+                </p>
+
+
+                <h2>
+                    Menulis apa yang saya alami.
+                </h2>
+
+
+                <p>
+                    Di luar dunia teknologi, saya juga aktif menulis
+                    di Kompasiana menggunakan nama akun
+                    <strong>Akbar Aridani Setiawan</strong>.
+                    Saya banyak menulis tentang kehidupan mahasiswa,
+                    pengalaman perkuliahan, teknologi, anak kos,
+                    dan berbagai hal yang saya lihat, dengar,
+                    rasakan, serta jalani dalam kehidupan sehari-hari.
+                </p>
+
+
+                <a href="#" class="text-link">
+
+                    Baca tulisan saya
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+
+        <div>
+
+            <p class="section-label">
+                LET'S CONNECT
+            </p>
+
+
+            <h2>
+                Mari terhubung 👋
+            </h2>
+
+        </div>
+
+
+        <div class="contact-list">
+
+
+            <!-- GANTI EMAIL -->
+
+            <a href="mailto:email-kamu@gmail.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                email-kamu@gmail.com
+
+            </a>
+
+
+            <!-- GANTI LINK INSTAGRAM -->
+
+            <a href="#">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                @akbar_aridani_setiawan
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Akbar Aridani Setiawan · Built with HTML & CSS
+
+    </footer>
+
 
 </body>
 </html>
