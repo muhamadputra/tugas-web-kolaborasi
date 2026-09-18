@@ -1,7 +1,7 @@
 # tugas-web-kolaborasi
 # Pemrograman Web
 # Kelompok 10
- - Muhamad Nurdia Saputra(3337250183)
+ - Muhamad Nurdian Saputra(3337250183)
  - Akbar Aridani Setiawan(3337250148)
 # HTML PAGES
  - `index.html` : kolaborasi
