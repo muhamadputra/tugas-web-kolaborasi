@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama - Kolaborasi Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eef2f7;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #1a252f;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card-menu {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            padding: 25px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2d3748;
+            transition: all 0.3s ease;
+        }
+
+        .card-menu:hover {
+            border-color: #4a90e2;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+        }
+
+        .card-menu h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #2b6cb0;
+        }
+
+        .card-menu p {
+            font-size: 13px;
+            color: #718096;
+        }
+
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Proyek Kolaborasi Web</h1>
+        <p class="subtitle">Silakan pilih halaman anggota kelompok di bawah ini untuk melihat detail masing-masing:</p>
+
+        <div class="menu-grid">
+            <a href="halaman1.html" class="card-menu">
+                <h3>Anggota 1</h3>
+                <p>Halaman Nurdian Putra</p>
+            </a>
+
+            <a href="halaman2.html" class="card-menu">
+                <h3>Anggota 2</h3>
+                <p>Halaman Teman Kelompok</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
