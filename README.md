@@ -4,6 +4,6 @@
  - Muhamad Nurdia Saputra(3337250183)
  - Akbar Aridani Setiawan(3337250148)
 # HTML PAGES
- -index.html : kolaborasi
- -Muhamad Nurdian Saoutra putra.html : individu
- -Akbar Aridani Setiawan akbar.html : individu
+ - index.html : kolaborasi
+ - Muhamad Nurdian Saoutra putra.html : individu
+ - Akbar Aridani Setiawan akbar.html : individu
